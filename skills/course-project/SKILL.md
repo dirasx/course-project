@@ -40,6 +40,7 @@ description: |-
 - Карточка передачи содержит ID, результат и пути, источники, выполненные проверки, ограничения и следующий шаг. Главный принимает результат, обновляет план и собирает общий комплект. Один исполнитель за раз владеет активным DWG и печатью AutoCAD в общей сессии Windows.
 - Перед сдачей открой итоговый PDF записки и проверь изменённые страницы, рисунки, таблицы и оглавление. Для чертежей сверь рабочий DWG и PDF печати. Статус готовности относится к конкретным проверенным файлам.
 - Для работы с DWG удобно использовать AutoCAD MCP, если пользователь уже подключил его и инструмент доступен в текущей сессии. Если MCP недоступен, работай через Computer Use в открытом AutoCAD, когда доступен интерфейс. Если оба способа недоступны, проверь предоставленный PDF чертежа и отметь, какие проверки требуют открыть DWG в AutoCAD.
+- Если без MCP нужную операцию с DWG трудно или невозможно выполнить, скажи, что AutoCAD MCP недоступен в текущей сессии, и объясни, для какой операции он поможет. Предложи подобрать MCP, совместимый с версией AutoCAD и системой пользователя, и объяснить, как его подключить. По просьбе пользователя сравни варианты по источнику, совместимости и требуемому доступу. Установку и подключение выполняй только после отдельного согласования выбранного варианта. Пока пользователь решает, продолжай доступные проверки.
 
 ## Записка по образцу
 
@@ -61,5 +62,7 @@ Course Project is a Codex skill for engineering students working on a technical 
 - **Review the submission.** Keep calculations, tables, plots, and drawings consistent. Check the final report PDF and compare plotted drawings with the working DWG.
 
 For DWG work, use an AutoCAD MCP connection if the user has already set it up and it is available. Otherwise, use Computer Use with an open AutoCAD session if you have UI access. If neither is available, review the provided drawing PDF and identify which checks still require opening the DWG in AutoCAD.
+
+If an operation is difficult or impossible without MCP, tell the user it is unavailable in the current session and explain which operation it would help with. Offer to find an option compatible with their AutoCAD version and operating system and explain how to connect it. If asked to look for options, compare their sources, compatibility, and access requirements. Get approval for the specific option before installing or connecting it. Continue any checks you can do in the meantime.
 
 Open your project in Codex and use `$course-project`. The [project rules template](assets/AGENTS.md) is in Russian.
