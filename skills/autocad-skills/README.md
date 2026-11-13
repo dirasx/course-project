@@ -18,7 +18,7 @@ npx skills add dirasx/xdy-skills --skill dwg-review --agent codex --global
 Use [Course Project](../course-project/SKILL.md) to manage the full assignment. It uses the relevant drawing skills when they are available. To install the coursework, drawing review, and reconstruction skills together in Codex, run the following command.
 
 ```sh
-npx skills add dirasx/xdy-skills --skill course-project dwg-review drawing-pdf-review drawing-redraw --agent codex --global
+npx skills add dirasx/xdy-skills --skill course-project dwg-review drawing-pdf-review drawing-redraw xdy-autocad-mcp --agent codex --global
 ```
 
 Course Project uses an existing AutoCAD MCP connection if it supports the operation you need. For a new connection to full AutoCAD on Windows, see the manual U-C4N setup and test. The `xdy-autocad-mcp` skill is optional. [Windows setup](xdy-autocad-mcp#windows-setup).

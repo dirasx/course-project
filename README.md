@@ -28,6 +28,10 @@ The skill workflow and its [project rules template](skills/course-project/assets
 
 ### Install in Codex
 
+For the coursework and AutoCAD bundle, ask Codex:
+
+> Install `course-project`, `dwg-review`, `drawing-pdf-review`, `drawing-redraw`, and `xdy-autocad-mcp` from https://github.com/dirasx/xdy-skills. Check for an existing AutoCAD MCP connection and ask me once whether to set up U-C4N if needed.
+
 ```sh
 npx skills add dirasx/xdy-skills --skill course-project --agent codex --global
 ```
@@ -58,6 +62,10 @@ Open your project in Codex and include `$course-project` in your request:
 - **Сборка и проверка.** Используйте общие исходные данные для расчётов, таблиц, графиков и чертежей. Перед сдачей проверьте итоговый PDF записки и сверьте PDF чертежей с рабочим DWG.
 
 Для курсовых с чертежами можно добавить скиллы для работы через MCP, проверки DWG и PDF и восстановления чертежей. [Установка и выбор инструментов](skills/autocad-skills#скиллы-для-autocad).
+
+Чтобы установить комплект для курсовой и AutoCAD, попросите Codex:
+
+> Установи из https://github.com/dirasx/xdy-skills скиллы `course-project`, `dwg-review`, `drawing-pdf-review`, `drawing-redraw` и `xdy-autocad-mcp`. Проверь, подключён ли AutoCAD MCP, и один раз спроси меня о настройке U-C4N, если он нужен.
 
 Для курсовых с расчётом в ЛИРА-САПР или LIRA-FEM можно подключить `EvgenVer/lira-sapr-mcp` на том же ПК с Windows. Автор проверил сервер на ЛИРА-САПР 2024 R2.3. Для первой проверки запустите сервер с `--no-scripts`, откройте тестовую копию `.lir` с отдельным именем и попросите Codex прочитать сводку модели. [Настройка в Codex](https://github.com/EvgenVer/lira-sapr-mcp#подключение-к-агенту) · [Параметры сервера](https://github.com/EvgenVer/lira-sapr-mcp#важно-знать).
 
