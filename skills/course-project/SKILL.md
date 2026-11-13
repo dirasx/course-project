@@ -1,6 +1,6 @@
 ---
 name: course-project
-description: Use when starting or continuing a technical or engineering course project (курсовая, курсовой проект) with calculations, a report, or drawings. Helps plan chapters, verify assignment data, and assemble the final deliverables in Codex.
+description: Helps engineering students plan and review a course project in Codex. Use when starting or resuming a technical course project (курсовая, курсовой проект), checking assignment or variant data and calculations, or preparing the report and drawings for submission.
 ---
 
 # Курсовая
