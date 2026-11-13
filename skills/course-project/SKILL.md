@@ -39,7 +39,7 @@ description: |-
 - Когда пользователь поручил делегировать, главный запускает доступных субагентов на независимые пункты. Передай каждому один результат, нужные файлы и критерий проверки. Долгоживущему чату главы достаточно `START.md` и текущих путей к файлам. Исполнитель пишет в свою папку `handoff/`, главный получает краткую карточку и открывает доказательства по необходимости.
 - Карточка передачи содержит ID, результат и пути, источники, выполненные проверки, ограничения и следующий шаг. Главный принимает результат, обновляет план и собирает общий комплект. Один исполнитель за раз владеет активным DWG и печатью AutoCAD в общей сессии Windows.
 - Перед сдачей открой итоговый PDF записки и проверь изменённые страницы, рисунки, таблицы и оглавление. Для чертежей сверь рабочий DWG и PDF печати. Статус готовности относится к конкретным проверенным файлам.
-- Для работы с DWG проверь, доступен ли [AutoCAD MCP](https://github.com/puran-water/autocad-mcp). Если пользователь попросил настроить его, используй инструкции репозитория и проверь подключение на копии чертежа.
+- Для работы с DWG удобно использовать AutoCAD MCP, если пользователь уже подключил его и инструмент доступен в текущей сессии. Если MCP недоступен, работай через Computer Use в открытом AutoCAD, когда доступен интерфейс. Если оба способа недоступны, проверь предоставленный PDF чертежа и отметь, какие проверки требуют открыть DWG в AutoCAD.
 
 ## Записка по образцу
 
@@ -59,5 +59,7 @@ Course Project is a Codex skill for engineering students working on a technical 
 - **Plan your work.** Break the assignment into chapters and keep the plan, progress, and decisions available across sessions.
 - **Check your inputs.** Trace values to the assignment and the correct variant, verify units and calculations, and flag gaps that need your input.
 - **Review the submission.** Keep calculations, tables, plots, and drawings consistent. Check the final report PDF and compare plotted drawings with the working DWG.
+
+For DWG work, use an AutoCAD MCP connection if the user has already set it up and it is available. Otherwise, use Computer Use with an open AutoCAD session if you have UI access. If neither is available, review the provided drawing PDF and identify which checks still require opening the DWG in AutoCAD.
 
 Open your project in Codex and use `$course-project`. The [project rules template](assets/AGENTS.md) is in Russian.
