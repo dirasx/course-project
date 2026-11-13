@@ -1,10 +1,16 @@
-# Course Project
+# xdy-skills
+
+A collection of agent skills by xdy. Each skill lives in its own folder and can be installed separately.
+
+[Browse on skills.sh](https://skills.sh/dirasx/xdy-skills) · [Read in Russian](#скиллы-xdy)
+
+## Course Project
 
 A Codex skill for engineering students working on a course project. Turn an assignment brief, variant data, and a sample report into a plan you can pick up across sessions. Use the same plan to check calculations, assemble the report, and review drawings before submission.
 
-[Latest release](https://github.com/dirasx/xdy-course-project/releases/latest) · [skills.sh](https://skills.sh/dirasx/xdy-course-project/course-project) · [Read in Russian](#курсовая-работа)
+[Release notes](https://github.com/dirasx/xdy-skills/releases/tag/v0.1.0) · [Course Project on skills.sh](https://skills.sh/dirasx/xdy-skills/course-project)
 
-## What it helps you do
+### What it helps you do
 
 - **Start or resume a project.** Keep the plan, current status, and decisions in `PLAN.md`, `STATUS.md`, and `DECISIONS.md`.
 - **Check assignment data.** Trace values back to the brief, the correct variant, and the methodology guide. Keep track of units and identify the gaps that need your input.
@@ -12,23 +18,27 @@ A Codex skill for engineering students working on a course project. Turn an assi
 
 The skill workflow and its [project rules template](skills/course-project/assets/AGENTS.md) are written in Russian.
 
-## Install in Codex
+### Install in Codex
 
 ```sh
-npx skills add dirasx/xdy-course-project --skill course-project --agent codex --global
+npx skills add dirasx/xdy-skills --skill course-project --agent codex --global
 ```
 
 You can also ask Codex:
 
-> Use `$skill-installer` to install the skill from https://github.com/dirasx/xdy-course-project/tree/main/skills/course-project. Use the Git installation method.
+> Use `$skill-installer` to install the skill from https://github.com/dirasx/xdy-skills/tree/main/skills/course-project. Use the Git installation method.
 
 Open your project in Codex and include `$course-project` in your request:
 
 > Use `$course-project`.
 
+## Скиллы xdy
+
+Коллекция скиллов для ИИ-агентов. Каждый скилл можно установить отдельно.
+
 <a name="русская-версия"></a>
 
-## Курсовая работа
+### Курсовая работа
 
 Скилл Codex для студентов, которые делают инженерную курсовую. Помогает собрать план по заданию, данным варианта и образцу записки, а затем продолжать работу по этому плану в новых чатах.
 
@@ -38,7 +48,7 @@ Open your project in Codex and include `$course-project` in your request:
 
 Для установки выполните команду выше или попросите Codex:
 
-> Используй `$skill-installer`. Установи скилл из https://github.com/dirasx/xdy-course-project/tree/main/skills/course-project через Git.
+> Используй `$skill-installer`. Установи скилл из https://github.com/dirasx/xdy-skills/tree/main/skills/course-project через Git.
 
 Откройте папку курсовой и напишите:
 
