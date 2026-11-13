@@ -1,5 +1,5 @@
 ---
-name: xdy-course-project
+name: course-project
 description: |-
   Скилл Codex для студентов, которые делают инженерную курсовую. Помогает составить план по главам, проверить данные своего варианта и подготовить расчёты, записку и чертежи к сдаче.
 
@@ -60,4 +60,4 @@ Course Project is a Codex skill for engineering students working on a technical 
 - **Check your inputs.** Trace values to the assignment and the correct variant, verify units and calculations, and flag gaps that need your input.
 - **Review the submission.** Keep calculations, tables, plots, and drawings consistent. Check the final report PDF and compare plotted drawings with the working DWG.
 
-Open your project in Codex and use `$xdy-course-project`. The [project rules template](assets/AGENTS.md) is in Russian.
+Open your project in Codex and use `$course-project`. The [project rules template](assets/AGENTS.md) is in Russian.
