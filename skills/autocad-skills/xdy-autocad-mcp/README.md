@@ -2,6 +2,8 @@
 
 A Codex skill for inspecting and editing drawings through AutoCAD MCP. It adapts [U-C4N's original skill](https://github.com/U-C4N/Autocad-MCP/blob/main/.claude/skills/autocad-mcp-premium/SKILL.md) and carries its [MIT notice](LICENSE). For live DWG work on Windows, use full AutoCAD and the separate [U-C4N server package](https://pypi.org/project/autocad-mcp-pro/1.8.0/).
 
+The optional skill can be installed separately from the server and its test.
+
 ```sh
 npx skills add dirasx/xdy-skills --skill xdy-autocad-mcp --agent codex --global
 ```
@@ -30,8 +32,8 @@ npx skills add dirasx/xdy-skills --skill xdy-autocad-mcp --agent codex --global
 
 Скилл для чтения, правки и проверки чертежей в Codex через подключённый AutoCAD MCP. Сервер ставится отдельно. Для первого теста понадобится полный AutoCAD на том же ПК и тестовый DWG с заданными единицами и окружностью известного диаметра. Открой DWG вручную.
 
-Установи скилл командой в начале страницы. Если сервер ещё не подключён, создай тестовую папку с подпапкой `drawings`, положи туда DWG и выполни [настройку для Windows](#windows-setup-and-read-only-test). В конфигурации подставь свои пути. После сохранения настроек заново запусти локальный Codex и отправь ему такой запрос:
+Если сервер ещё не подключён, создай тестовую папку с подпапкой `drawings`, положи туда DWG и выполни настройку для Windows. В конфигурации подставь свои пути. После сохранения настроек заново запусти локальный Codex. Скилл можно установить отдельно командой в начале страницы. [Настройка для Windows](#windows-setup-and-read-only-test).
 
-> Используй `$xdy-autocad-mcp`. Проверь подключение к открытому тестовому DWG `[полный путь]` через COM и подтверди режим только чтения. Назови точный путь файла, единицы и слой контрольной окружности. Через `entity_list` или `entity_get` прочитай геометрию окружности и определи её диаметр. Чертёж не меняй и не сохраняй.
+> Проверь подключение к открытому тестовому DWG `[полный путь]` через COM и подтверди режим только чтения. Назови точный путь файла, единицы и слой контрольной окружности. Через `entity_list` или `entity_get` прочитай геометрию окружности и определи её диаметр. Чертёж не меняй и не сохраняй.
 
 Сверь измеренный диаметр со значением, заданным при создании чертежа. Для отдельного теста записи открой одноразовую копию DWG из тестовой папки, выставь `READ_ONLY = "false"` и перезапусти Codex. Попроси его изменить диаметр, сохранить копию, заново открыть её и считать размер из геометрии.
