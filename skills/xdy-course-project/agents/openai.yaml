@@ -1,0 +1,4 @@
+interface:
+  display_name: "XDY Course Project · Курсовая"
+  short_description: "Plan and review engineering course projects"
+  default_prompt: "Use $xdy-course-project."
