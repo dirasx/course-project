@@ -30,7 +30,7 @@ The skill workflow and its [project rules template](skills/course-project/assets
 
 For the coursework and AutoCAD bundle, ask Codex:
 
-> Install `course-project`, `dwg-review`, `drawing-pdf-review`, `drawing-redraw`, and `xdy-autocad-mcp` from https://github.com/dirasx/xdy-skills. Check for an existing AutoCAD MCP connection and ask me once whether to set up U-C4N if needed.
+> Check which coursework and AutoCAD skills are installed, then install the missing skills from https://github.com/dirasx/xdy-skills: `course-project`, `dwg-review`, `drawing-pdf-review`, `drawing-redraw`, and `xdy-autocad-mcp`. Check for a working AutoCAD MCP connection. If none is available, ask once whether to install and configure U-C4N AutoCAD MCP. If I agree, install, configure and test it for the project.
 
 ```sh
 npx skills add dirasx/xdy-skills --skill course-project --agent codex --global
@@ -65,7 +65,7 @@ Open your project in Codex and include `$course-project` in your request:
 
 Чтобы установить комплект для курсовой и AutoCAD, попросите Codex:
 
-> Установи из https://github.com/dirasx/xdy-skills скиллы `course-project`, `dwg-review`, `drawing-pdf-review`, `drawing-redraw` и `xdy-autocad-mcp`. Проверь, подключён ли AutoCAD MCP, и один раз спроси меня о настройке U-C4N, если он нужен.
+> Проверь установленные скиллы и установи недостающие из https://github.com/dirasx/xdy-skills для курсовой и AutoCAD: `course-project`, `dwg-review`, `drawing-pdf-review`, `drawing-redraw`, `xdy-autocad-mcp`. Проверь, работает ли подключённый AutoCAD MCP. Если подходящего подключения нет, один раз спроси, установить и настроить ли U-C4N AutoCAD MCP. После моего согласия установи, настрой и проверь его для проекта.
 
 Для курсовых с расчётом в ЛИРА-САПР или LIRA-FEM можно подключить `EvgenVer/lira-sapr-mcp` на том же ПК с Windows. Автор проверил сервер на ЛИРА-САПР 2024 R2.3. Для первой проверки запустите сервер с `--no-scripts`, откройте тестовую копию `.lir` с отдельным именем и попросите Codex прочитать сводку модели. [Настройка в Codex](https://github.com/EvgenVer/lira-sapr-mcp#подключение-к-агенту) · [Параметры сервера](https://github.com/EvgenVer/lira-sapr-mcp#важно-знать).
 
