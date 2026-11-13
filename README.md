@@ -2,6 +2,8 @@
 
 A collection of agent skills by xdy. Each skill lives in its own folder and can be installed separately.
 
+OpenAI Codex helped develop the coursework workflow, drawing checks, and AutoCAD MCP setup guide.
+
 [Browse on skills.sh](https://skills.sh/dirasx/xdy-skills) · [Read in Russian](#скиллы-xdy)
 
 ## AutoCAD skills
@@ -43,6 +45,8 @@ Open your project in Codex and include `$course-project` in your request:
 ## Скиллы xdy
 
 Коллекция скиллов для ИИ-агентов. Каждый скилл можно установить отдельно.
+
+OpenAI Codex помог разработать порядок работы над курсовой, проверки чертежей и инструкцию по настройке AutoCAD MCP.
 
 В [разделе AutoCAD](skills/autocad-skills#скиллы-для-autocad) собраны проверка DWG, проверка чертежей в PDF и восстановление чертежей по исходникам.
 Для работы с открытым AutoCAD через MCP есть [xdy AutoCAD MCP](skills/autocad-skills/xdy-autocad-mcp#xdy-autocad-mcp-для-windows).
