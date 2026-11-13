@@ -51,6 +51,12 @@ description: |-
 3. Если передача в главный чат не согласована, ID не подтверждён, очередь недоступна или команда не подтвердила постановку в очередь, оставь тот же короткий отчёт в итоговом ответе чата главы. Карточка в `handoff/` доступна главному при следующем просмотре проекта.
 4. Главный завершает текущую работу. Отчёт из очереди разбирает на следующем ходу, а при возобновлении проекта проверяет ожидаемые карточки в `handoff/`. Принимает главу после проверки результата и обновляет соответствующий пункт `PLAN.md`. Повторную карточку по уже принятой версии файла достаточно сверить с записью в плане.
 
+## Расчёты в ЛИРА-САПР
+
+- Если задание требует ЛИРА-САПР или LIRA-FEM, запиши в `PLAN.md` путь к модели, исходные данные варианта и ожидаемые результаты. Перед расчётом сверь единицы, схему, опоры, жёсткости, нагрузки и сочетания с заданием.
+- Используй уже подключённый MCP для ЛИРЫ, если он поддерживает нужную операцию. Сверь полный путь модели. Для правок и пересчёта исходной модели используй рабочую копию с уникальным именем файла. ЛИРА может хранить результаты одноимённых моделей вместе, даже если сами файлы лежат в разных папках.
+- Перед переносом результатов в записку проверь, что расчёт завершён для текущей версии модели. Сверь предупреждения в протоколе, единицы, загружение или сочетание и номера узлов или элементов. Если MCP недоступен, используй открытое приложение через Computer Use или запроси у пользователя протокол и выгрузку результатов. Если связь выгрузки с текущей моделью не подтверждена, отметь результаты как непроверенные и продолжай независимые пункты плана.
+
 ## Работа с чертежами
 
 Добавь в `PLAN.md` нужные чертежи и листы по текущему заданию. Для каждого укажи исходники и связанные расчёты, требуемые виды или разрезы, рабочий файл, итоговые форматы и проверки. Используй данные своего варианта для геометрии и требования к оформлению из задания, методички и образца.
@@ -91,5 +97,7 @@ Course Project is a Codex skill for engineering students working on a technical 
 Use `$drawing-redraw` to reconstruct a drawing from source material, `$dwg-review` for an existing DWG, and `$drawing-pdf-review` for plotted sheets. Use each companion skill when it is available. For a new drawing, derive geometry and views from the assignment and the student's calculations.
 
 Use an already configured AutoCAD MCP connection that supports the requested operation. Run File IPC calls sequentially. If no suitable connection is available, use Computer Use with an open AutoCAD session. Without CAD access, continue with a drawing specification, calculations, or PDF review as the task requires. Identify the operations that still need CAD access and mark checks of native geometry, layers, and references as open until the DWG can be inspected.
+
+For assignments that require LIRA-SAPR or LIRA-FEM, check the model inputs against the assignment and use an already configured LIRA MCP connection when it supports the operation. Check the full model path and use a uniquely named working copy for edits and reruns. Before citing results, confirm that the solver finished for the current model revision and review its warnings, units, load cases or combinations, and node or element IDs. If MCP is unavailable, use the application UI or request the solver log and exported results. Mark results with unconfirmed provenance as unverified.
 
 Open your project in Codex and use `$course-project`. The [project rules template](assets/AGENTS.md) is in Russian.

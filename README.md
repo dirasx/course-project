@@ -22,6 +22,8 @@ A Codex skill for engineering students working on a course project. Turn an assi
 
 For projects with drawings, add the AutoCAD skills for drafting through MCP, DWG review, PDF review, and reconstruction. [AutoCAD setup and skill selection](skills/autocad-skills).
 
+For projects that require structural analysis in LIRA-SAPR or LIRA-FEM, connect the optional `EvgenVer/lira-sapr-mcp` server on the Windows PC running LIRA. The maintainer reports testing with LIRA-SAPR 2024 R2.3. Start with `--no-scripts` and check the model summary on a test copy with a unique filename. [Codex setup](https://github.com/EvgenVer/lira-sapr-mcp#подключение-к-агенту) · [Server options](https://github.com/EvgenVer/lira-sapr-mcp#важно-знать).
+
 The skill workflow and its [project rules template](skills/course-project/assets/AGENTS.md) are written in Russian.
 
 ### Install in Codex
@@ -56,6 +58,8 @@ Open your project in Codex and include `$course-project` in your request:
 - **Сборка и проверка.** Используйте общие исходные данные для расчётов, таблиц, графиков и чертежей. Перед сдачей проверьте итоговый PDF записки и сверьте PDF чертежей с рабочим DWG.
 
 Для курсовых с чертежами можно добавить скиллы для работы через MCP, проверки DWG и PDF и восстановления чертежей. [Установка и выбор инструментов](skills/autocad-skills#скиллы-для-autocad).
+
+Для курсовых с расчётом в ЛИРА-САПР или LIRA-FEM можно подключить `EvgenVer/lira-sapr-mcp` на том же ПК с Windows. Автор проверил сервер на ЛИРА-САПР 2024 R2.3. Для первой проверки запустите сервер с `--no-scripts`, откройте тестовую копию `.lir` с отдельным именем и попросите Codex прочитать сводку модели. [Настройка в Codex](https://github.com/EvgenVer/lira-sapr-mcp#подключение-к-агенту) · [Параметры сервера](https://github.com/EvgenVer/lira-sapr-mcp#важно-знать).
 
 Для установки выполните команду выше или попросите Codex:
 
