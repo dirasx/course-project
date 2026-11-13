@@ -6,7 +6,7 @@ license: MIT
 
 # Проверка DWG
 
-Начни с проверки чертежа без изменений. Используй уже доступный инструмент чтения DWG или открытый AutoCAD через Computer Use. Установи, какой файл и лист открыты и какие свойства позволяет увидеть выбранный инструмент. Если доступен только PDF, проверь видимое и укажи, что проверка исходного DWG не выполнена.
+Начни с проверки чертежа без изменений. Сначала проверь инструменты подключённого AutoCAD MCP, включая поиск на сервере, если он есть. Сверь полный путь и нужный лист. Если режим чтения не даёт открыть DWG через MCP, попроси пользователя открыть его и продолжи проверки через MCP. Если подключение недоступно, сообщи об этом. Используй другой инструмент чтения DWG или Computer Use, если запрос допускает этот способ. При наличии только PDF проверь видимое и укажи, какие проверки требуют исходного DWG.
 
 1. **Исходное состояние.** Зафиксируй путь и версию файла, единицы, начало координат, рабочую систему координат и границы модели, если они важны. Проверь нужные слои и блоки, внешние ссылки, шрифты и типы линий. Отметь отсутствующие зависимости.
 2. **Если запрос включает правку.** Работай на копии. Перед пакетным изменением уточни, какие объекты должны попасть под него, и проверь выборку на малом примере. Сравни состояние до и после, используя идентификаторы, свойства или количество объектов там, где это помогает увидеть лишние изменения. После сохранения открой копию заново и сверяй её с исходником по неизменяемым свойствам, важным для задачи.
@@ -15,4 +15,4 @@ license: MIT
 
 ## English
 
-Start with read-only inspection. Confirm the drawing identity and record relevant units, coordinates, layers, blocks, external references, fonts, layouts, and plot settings. When edits are requested, work on a copy, preview the intended edits, then reopen the saved file and compare the result with the baseline. Check plotted sheets for scale, clipping, legibility, and lineweights. Report evidence and unverified properties separately. With PDF alone, review visible sheets and leave native DWG checks open.
+Start with read-only inspection. Check the configured AutoCAD MCP first and use its tool search when available. Confirm the drawing identity and record relevant units, coordinates, layers, blocks, external references, fonts, layouts, and plot settings. Report unavailable MCP access before using a different tool that fits the request. When edits are requested, work on a copy, preview the intended edits, then reopen the saved file and compare the result with the baseline. Check plotted sheets for scale, clipping, legibility, and lineweights. Report evidence and unverified properties separately. With PDF alone, review visible sheets and leave native DWG checks open.
