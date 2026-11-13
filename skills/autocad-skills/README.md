@@ -21,7 +21,7 @@ Use [Course Project](../course-project/SKILL.md) to manage the full assignment. 
 npx skills add dirasx/xdy-skills --skill course-project dwg-review drawing-pdf-review drawing-redraw --agent codex --global
 ```
 
-Course Project uses an existing AutoCAD MCP connection if it supports the operation you need. For a new connection to full AutoCAD on Windows, see the manual U-C4N setup and test. The `xdy-autocad-mcp` skill is optional. [Windows setup](xdy-autocad-mcp#windows-setup-and-read-only-test).
+Course Project uses an existing AutoCAD MCP connection if it supports the operation you need. For a new connection to full AutoCAD on Windows, see the manual U-C4N setup and test. The `xdy-autocad-mcp` skill is optional. [Windows setup](xdy-autocad-mcp#windows-setup).
 
 For visual review of a redrawn sheet, `compare_redraw.py` aligns two images using matching points and highlights differences in pixels. Check actual drawing dimensions in CAD. [Script source](https://github.com/pengxiaoan/autocad-dwg-redraw-skill/blob/main/skills/autocad-image-redraw/scripts/compare_redraw.py).
 
