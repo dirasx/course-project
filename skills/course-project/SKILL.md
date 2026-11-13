@@ -39,6 +39,7 @@ description: |-
 - Когда пользователь поручил делегировать, главный запускает доступных субагентов на независимые пункты. Передай каждому один результат, нужные файлы и критерий проверки. Долгоживущему чату главы достаточно `START.md` и текущих путей к файлам. Исполнитель пишет в свою папку `handoff/`, главный получает краткую карточку и открывает доказательства по необходимости.
 - Карточка передачи содержит ID, результат и пути, источники, выполненные проверки, ограничения и следующий шаг. Главный принимает результат, обновляет план и собирает общий комплект. Один исполнитель за раз владеет активным DWG и печатью AutoCAD в общей сессии Windows.
 - Перед сдачей открой итоговый PDF записки и проверь изменённые страницы, рисунки, таблицы и оглавление. Для чертежей сверь рабочий DWG и PDF печати. Статус готовности относится к конкретным проверенным файлам.
+- Если есть только PDF чертежей, проверь по листам читаемость, размеры и подписи, согласованность видов и ссылки на разрезы. Для каждого замечания укажи лист, место и что нужно сверить. Слои, внешние ссылки и геометрию модели отметь как непроверенные до доступа к DWG.
 - Для работы с DWG удобно использовать AutoCAD MCP, если пользователь уже подключил его и инструмент доступен в текущей сессии. Если MCP недоступен, работай через Computer Use в открытом AutoCAD, когда доступен интерфейс. Если оба способа недоступны, проверь предоставленный PDF чертежа и отметь, какие проверки требуют открыть DWG в AutoCAD.
 - Если без MCP нужную операцию с DWG трудно или невозможно выполнить, скажи, что AutoCAD MCP недоступен в текущей сессии, и объясни, для какой операции он поможет. Предложи подобрать MCP, совместимый с версией AutoCAD и системой пользователя, и объяснить, как его подключить. По просьбе пользователя сравни варианты по источнику, совместимости и требуемому доступу. Установку и подключение выполняй только после отдельного согласования выбранного варианта. Пока пользователь решает, продолжай доступные проверки.
 
@@ -60,6 +61,8 @@ Course Project is a Codex skill for engineering students working on a technical 
 - **Plan your work.** Break the assignment into chapters and keep the plan, progress, and decisions available across sessions.
 - **Check your inputs.** Trace values to the assignment and the correct variant, verify units and calculations, and flag gaps that need your input.
 - **Review the submission.** Keep calculations, tables, plots, and drawings consistent. Check the final report PDF and compare plotted drawings with the working DWG.
+
+For PDF-only drawing review, check legibility, visible dimensions and labels, and consistency across views and sheets. Locate each finding on a sheet, and mark DWG layers, external references, and model geometry as unverified.
 
 For DWG work, use an AutoCAD MCP connection if the user has already set it up and it is available. Otherwise, use Computer Use with an open AutoCAD session if you have UI access. If neither is available, review the provided drawing PDF and identify which checks still require opening the DWG in AutoCAD.
 

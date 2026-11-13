@@ -4,6 +4,10 @@ A collection of agent skills by xdy. Each skill lives in its own folder and can 
 
 [Browse on skills.sh](https://skills.sh/dirasx/xdy-skills) · [Read in Russian](#скиллы-xdy)
 
+## AutoCAD skills
+
+[Browse the AutoCAD collection](skills/autocad-skills). It covers [DWG review](skills/autocad-skills/dwg-review/SKILL.md), [PDF drawing review](skills/autocad-skills/drawing-pdf-review/SKILL.md), and [drawing reconstruction](skills/autocad-skills/drawing-redraw/SKILL.md).
+
 ## Course Project
 
 A Codex skill for engineering students working on a course project. Turn an assignment brief, variant data, and a sample report into a plan you can pick up across sessions. Use the same plan to check calculations, assemble the report, and review drawings before submission.
@@ -35,6 +39,8 @@ Open your project in Codex and include `$course-project` in your request:
 ## Скиллы xdy
 
 Коллекция скиллов для ИИ-агентов. Каждый скилл можно установить отдельно.
+
+В [разделе AutoCAD](skills/autocad-skills#скиллы-для-autocad) собраны проверка DWG, проверка чертежей в PDF и восстановление чертежей по исходникам.
 
 <a name="русская-версия"></a>
 
