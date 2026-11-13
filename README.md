@@ -1,8 +1,8 @@
-# Course Project · Курсовая
+# Course Project
 
 A Codex skill for engineering students working on a course project. Turn an assignment brief, variant data, and a sample report into a plan you can pick up across sessions. Use the same plan to check calculations, assemble the report, and review drawings before submission.
 
-[Latest release](https://github.com/dirasx/xdy-course-project/releases/latest) · [skills.sh](https://skills.sh/dirasx/xdy-course-project/course-project) · [Русская версия](#русская-версия)
+[Latest release](https://github.com/dirasx/xdy-course-project/releases/latest) · [skills.sh](https://skills.sh/dirasx/xdy-course-project/course-project) · [Read in Russian](#курсовая-работа)
 
 ## What it helps you do
 
@@ -26,7 +26,9 @@ Open your project in Codex and include `$course-project` in your request:
 
 > Use `$course-project`.
 
-## Русская версия
+<a name="русская-версия"></a>
+
+## Курсовая работа
 
 Скилл Codex для студентов, которые делают инженерную курсовую. Помогает собрать план по заданию, данным варианта и образцу записки, а затем продолжать работу по этому плану в новых чатах.
 
