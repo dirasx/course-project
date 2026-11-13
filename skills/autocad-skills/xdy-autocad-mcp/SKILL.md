@@ -31,4 +31,6 @@ For a timeout, stale revision, or active-document change, pause writes. Recheck 
 
 For edits or deliverables that require a saved file, save to the requested output path. Verify the exact saved artifact with `drawing_verify_requirements` using its `artifact_path` input if supported for that file and backend. Otherwise reopen the output and repeat the relevant measurements. For a delivery, `drawing_deliver` can handle verification and produce a manifest. Check the returned geometry acceptance and coverage before relying on it.
 
+In a shared live AutoCAD session, wait for each dependent operation on the same drawing to finish before starting the next. Apply the edit, save, and then read the saved file and measure it. Run calls to a File IPC backend sequentially.
+
 Report the file path, the target and measured values with units, the affected handle or feature, and any checks that failed or remain open. Distinguish measurements from the open document and the saved artifact. An unsupported check or incomplete scan stays open.

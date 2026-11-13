@@ -15,7 +15,15 @@ Install a single skill by selecting its name.
 npx skills add dirasx/xdy-skills --skill dwg-review --agent codex --global
 ```
 
-[Course Project](../course-project/SKILL.md) covers the wider coursework. These skills can also be used for standalone drawing tasks.
+Use [Course Project](../course-project/SKILL.md) to manage the full assignment. It selects the relevant drawing skills when they are available. To install the coursework skill and all four drawing skills together in Codex, run the following command.
+
+```sh
+npx skills add dirasx/xdy-skills --skill course-project dwg-review drawing-pdf-review drawing-redraw xdy-autocad-mcp --agent codex --global
+```
+
+For live DWG work in Codex with full AutoCAD on Windows, start with the U-C4N server and the read-only test. [Windows setup](xdy-autocad-mcp#windows-setup-and-read-only-test).
+
+For visual review of a redrawn sheet, `compare_redraw.py` aligns two images using matching points and highlights differences in pixels. Check actual drawing dimensions in CAD. [Script source](https://github.com/pengxiaoan/autocad-dwg-redraw-skill/blob/main/skills/autocad-image-redraw/scripts/compare_redraw.py).
 
 ## Скиллы для AutoCAD
 
@@ -24,7 +32,9 @@ npx skills add dirasx/xdy-skills --skill dwg-review --agent codex --global
 - [Восстановление чертежа](drawing-redraw/SKILL.md) помогает перенести геометрию из DWG, векторного PDF или изображения с известными размерами и указать точность результата.
 - [xdy AutoCAD MCP](xdy-autocad-mcp#xdy-autocad-mcp-для-windows) помогает читать и править чертежи через подключённый MCP и перепроверять геометрию в сохранённом DWG.
 
-Для установки укажи имя нужного скилла в команде выше. [Курсовая работа](../course-project/SKILL.md) помогает вести учебный проект целиком.
+Для установки одного скилла укажи его имя в первой команде выше. Вторая команда устанавливает комплект для курсовой с чертежами. Скилл `course-project` ведёт работу по заданию и использует доступные скиллы для AutoCAD по задаче. [Курсовая работа](../course-project/SKILL.md).
+
+Для сравнения восстановленного листа с образцом можно использовать `compare_redraw.py`. Он совмещает два изображения по опорным точкам и показывает расхождения в пикселях. Размеры проверяй по геометрии в CAD. [Исходник скрипта](https://github.com/pengxiaoan/autocad-dwg-redraw-skill/blob/main/skills/autocad-image-redraw/scripts/compare_redraw.py).
 
 ## Sources and license notices
 
@@ -34,7 +44,9 @@ npx skills add dirasx/xdy-skills --skill dwg-review --agent codex --global
 
 ## Справка по AutoCAD MCP
 
-[AutoCAD MCP Pro](https://github.com/U-C4N/Autocad-MCP) поддерживает работу с открытым AutoCAD через COM в Windows и отдельный режим работы с DXF без AutoCAD. [autocad-mcp-premium](https://github.com/U-C4N/Autocad-MCP/tree/main/.claude/skills/autocad-mcp-premium) — набор инструкций для агента, который работает с этим сервером. В документации Pro описаны режим чтения, ограничения по папкам и список разрешённых инструментов.
+Для Codex и полного AutoCAD на Windows начни с сервера U-C4N. Он подключается к открытому AutoCAD через COM и поддерживает чтение, правки и проверку сохранённого DWG. `xdy-autocad-mcp` адаптирует инструкции `autocad-mcp-premium` для Codex и работает с отдельно подключённым сервером. [Сервер U-C4N](https://github.com/U-C4N/Autocad-MCP) · [Настройка и тест](xdy-autocad-mcp#xdy-autocad-mcp-для-windows).
+
+Официальный MCP Autodesk работает с Autodesk Assistant. В обычном AutoCAD документированы чтение и анализ открытого чертежа, а инструменты записи доступны в Civil 3D. [Документация Autodesk](https://help.autodesk.com/cloudhelp/ENU/ADSKMCP-AutoCADCivil3DMcp/files/ADSKMCP_AutoCADCivil3DMcp_autodesk_autocad_civil_3d_mcp_html.html).
 
 [AutoCAD MCP от Puran Water](https://github.com/puran-water/autocad-mcp) использует другой способ подключения к AutoCAD LT 2024+ в Windows. Его режим без AutoCAD тоже рассчитан на DXF.
 

@@ -38,11 +38,24 @@ description: |-
 - Храни исходники отдельно от рабочей сборки. Связывай расчёт, таблицу, график и чертёж одним набором данных. Если изменился вход, отметь зависимые результаты и пересобери их перед приёмкой.
 - Когда пользователь поручил делегировать, главный запускает доступных субагентов на независимые пункты. Передай каждому один результат, нужные файлы и критерий проверки. Долгоживущему чату главы достаточно `START.md` и текущих путей к файлам. Исполнитель пишет в свою папку `handoff/`, главный получает краткую карточку и открывает доказательства по необходимости.
 - Карточка передачи содержит ID, результат и пути, источники, выполненные проверки, ограничения и следующий шаг. Главный принимает результат, обновляет план и собирает общий комплект. Один исполнитель за раз владеет активным DWG и печатью AutoCAD в общей сессии Windows.
-- Перед сдачей открой итоговый PDF записки и проверь изменённые страницы, рисунки, таблицы и оглавление. Для чертежей сверь рабочий DWG и PDF печати. Статус готовности относится к конкретным проверенным файлам.
-- Если есть только PDF чертежей, проверь по листам читаемость, размеры и подписи, согласованность видов и ссылки на разрезы. Для каждого замечания укажи лист, место и что нужно сверить. Слои, внешние ссылки и геометрию модели отметь как непроверенные до доступа к DWG.
-- Для работы с DWG удобно использовать AutoCAD MCP, если пользователь уже подключил его и инструмент доступен в текущей сессии. Если MCP недоступен, работай через Computer Use в открытом AutoCAD, когда доступен интерфейс. Если оба способа недоступны, проверь предоставленный PDF чертежа и отметь, какие проверки требуют открыть DWG в AutoCAD.
-- Если `xdy-autocad-mcp` уже доступен среди установленных скиллов, используй его для работы через подключённый AutoCAD MCP и проверки результата в сохранённом DWG.
-- Если без MCP нужную операцию с DWG трудно или невозможно выполнить, скажи, что AutoCAD MCP недоступен в текущей сессии, и объясни, для какой операции он поможет. Предложи подобрать MCP, совместимый с версией AutoCAD и системой пользователя, и объяснить, как его подключить. По просьбе пользователя сравни варианты по источнику, совместимости и требуемому доступу. Установку и подключение выполняй только после отдельного согласования выбранного варианта. Пока пользователь решает, продолжай доступные проверки.
+- Перед сдачей открой итоговый PDF записки и проверь изменённые страницы, рисунки, таблицы и оглавление. Статус готовности относится к конкретным проверенным файлам.
+
+## Работа с чертежами
+
+Добавь в `PLAN.md` нужные чертежи и листы по текущему заданию. Для каждого укажи исходники и связанные расчёты, требуемые виды или разрезы, рабочий файл, итоговые форматы и проверки. Используй данные своего варианта для геометрии и требования к оформлению из задания, методички и образца.
+
+Выбери действие по цели задачи. Подключай подходящие скиллы, если они доступны в текущей сессии.
+
+| Задача | Что делать |
+|---|---|
+| Создать новый чертёж | Собери из задания и расчётов геометрию, единицы, виды, размеры и подписи. Подготовь чертёж доступными CAD-инструментами или оставь в плане спецификацию для черчения, если CAD недоступен. |
+| Восстановить чертёж из исходника | Используй `$drawing-redraw`. Выбери исходник, по которому можно подтвердить геометрию, и отметь нужные опорные размеры. |
+| Проверить или исправить существующий DWG | Используй `$dwg-review` для проверки исходника, ограничений правки и результата. |
+| Проверить листы PDF | Используй `$drawing-pdf-review`. Проверь читаемость, обрезку, размеры, подписи, согласованность видов и ссылки на разрезы. Привяжи замечания к месту на листе. При наличии только PDF отметь проверки геометрии модели, слоёв и внешних ссылок как открытые. |
+
+Для черчения, восстановления, правок и замеров используй подключённый AutoCAD MCP с нужными возможностями. Если доступен `$xdy-autocad-mcp`, используй его инструкции при работе через MCP. Если MCP недоступен, используй Computer Use при доступе к открытому AutoCAD. При отсутствии нужного инструмента продолжай со спецификацией, расчётами или проверкой предоставленного PDF по задаче. Если MCP поможет выполнить недоступную операцию, объясни какую и предложи вариант под версию AutoCAD и ОС. Устанавливай и подключай выбранный сервер с согласия пользователя.
+
+Для листов с критичными размерами, углами или отметками сохрани рядом с пунктом плана повторяемые проверки. Для каждой укажи ожидаемое значение, его источник, единицы, допуск из задания или методички, если он задан, и как однозначно найти геометрию для замера. При правке замерь критичные элементы затронутого листа до изменения, если доступен исходный DWG. После сохранения, в том числе после правки подписей, заново открой DWG или считай сохранённый файл поддерживаемым инструментом и повтори замеры. Запиши файл или ревизию, ожидаемое и фактическое значения, отклонение и статус или причину, по которой замер не выполнен. Если допустимость расхождения зависит от неизвестного допуска, оставь её открытой. При выпуске листа проверь свежий PDF печати для той же версии DWG.
 
 ## Записка по образцу
 
@@ -61,11 +74,11 @@ Course Project is a Codex skill for engineering students working on a technical 
 
 - **Plan your work.** Break the assignment into chapters and keep the plan, progress, and decisions available across sessions.
 - **Check your inputs.** Trace values to the assignment and the correct variant, verify units and calculations, and flag gaps that need your input.
-- **Review the submission.** Keep calculations, tables, plots, and drawings consistent. Check the final report PDF and compare plotted drawings with the working DWG.
+- **Plan and verify drawings.** List the drawings, source calculations, required views, and outputs in the project plan. Keep repeatable checks for critical dimensions and angles. Rerun them against the saved DWG after edits, including annotation changes, and review the current plotted PDF before submission.
 
-For PDF-only drawing review, check legibility, visible dimensions and labels, and consistency across views and sheets. Locate each finding on a sheet, and mark DWG layers, external references, and model geometry as unverified.
+Use `$drawing-redraw` to reconstruct a drawing from source material, `$dwg-review` for an existing DWG, `$drawing-pdf-review` for plotted sheets, and `$xdy-autocad-mcp` to draft, edit, or measure through a configured AutoCAD MCP. Use each companion skill when it is available. For a new drawing, derive geometry and views from the assignment and the student's calculations.
 
-For DWG work, use an AutoCAD MCP connection if the user has already set it up and it is available. Otherwise, use Computer Use with an open AutoCAD session if you have UI access. If neither is available, review the provided drawing PDF and identify which checks still require opening the DWG in AutoCAD.
+Use an available AutoCAD MCP connection with the required capabilities or Computer Use with an open AutoCAD session. Without CAD access, prepare a drawing specification or review the supplied PDF as the task requires. Mark checks of native geometry, layers, and references as open until the DWG can be inspected.
 
 If an operation is difficult or impossible without MCP, tell the user it is unavailable in the current session and explain which operation it would help with. Offer to find an option compatible with their AutoCAD version and operating system and explain how to connect it. If asked to look for options, compare their sources, compatibility, and access requirements. Get approval for the specific option before installing or connecting it. Continue any checks you can do in the meantime.
 

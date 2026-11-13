@@ -20,6 +20,8 @@ A Codex skill for engineering students working on a course project. Turn an assi
 - **Check assignment data.** Trace values back to the brief, the correct variant, and the methodology guide. Keep track of units and identify the gaps that need your input.
 - **Keep deliverables consistent.** Use the same inputs for calculations, tables, plots, and drawings. Review the final report PDF and check plotted drawings against the working DWG.
 
+For projects with drawings, add the AutoCAD skills for drafting through MCP, DWG review, PDF review, and reconstruction. [AutoCAD setup and skill selection](skills/autocad-skills).
+
 The skill workflow and its [project rules template](skills/course-project/assets/AGENTS.md) are written in Russian.
 
 ### Install in Codex
@@ -52,6 +54,8 @@ Open your project in Codex and include `$course-project` in your request:
 - **Начало и продолжение работы.** Ведите план, текущий статус и решения в `PLAN.md`, `STATUS.md` и `DECISIONS.md`.
 - **Проверка исходных данных.** Сверяйте значения с заданием, своим вариантом и методичкой. Учитывайте единицы измерения и отмечайте, где нужны уточнения.
 - **Сборка и проверка.** Используйте общие исходные данные для расчётов, таблиц, графиков и чертежей. Перед сдачей проверьте итоговый PDF записки и сверьте PDF чертежей с рабочим DWG.
+
+Для курсовых с чертежами можно добавить скиллы для работы через MCP, проверки DWG и PDF и восстановления чертежей. [Установка и выбор инструментов](skills/autocad-skills#скиллы-для-autocad).
 
 Для установки выполните команду выше или попросите Codex:
 
