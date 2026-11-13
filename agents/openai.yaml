@@ -1,0 +1,4 @@
+interface:
+  display_name: "Курсовая"
+  short_description: "План, главы и проверка материалов курсовой"
+  default_prompt: "Используй $kursovaya и подготовь рабочую структуру этой курсовой по её заданию."
