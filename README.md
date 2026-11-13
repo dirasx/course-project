@@ -1,13 +1,19 @@
-# Курсовая
+# Course Project · Курсовая
 
-`$kursovaya` — скилл Codex для технической курсовой. Он помогает вести план, проверять исходные данные и собирать записку и чертежи.
+`$course-project` helps plan and review an engineering course project with calculations, a technical report, and drawings. The workflow and project template are written in Russian.
 
-## Установка через Codex
+## Установка в Codex
 
-Отправьте агенту Codex этот запрос:
+Отправьте агенту этот запрос:
 
-> Используй `$skill-installer` и установи скилл «Курсовая» из публичного GitHub-репозитория https://github.com/dirasx/kursovaya. Путь в репозитории — `skills/kursovaya`. Установи через Git (`--method git`).
+> Используй `$skill-installer` и установи `course-project` из https://github.com/dirasx/course-project. Путь в репозитории `skills/course-project`, метод установки `git`.
 
-Откройте проект курсовой и напишите: «Используй `$kursovaya` и подготовь рабочую структуру по заданию». Если скилл не появился, перезапустите Codex.
+Или выполните в терминале:
 
-В [SKILL.md](skills/kursovaya/SKILL.md) описан рабочий процесс. В [assets/AGENTS.md](skills/kursovaya/assets/AGENTS.md) лежит шаблон правил для проекта.
+```sh
+npx skills add dirasx/course-project --skill course-project --agent codex --global
+```
+
+Откройте проект курсовой и напишите «Используй `$course-project` и подготовь рабочую структуру по заданию».
+
+[Инструкции скилла](skills/course-project/SKILL.md) · [Шаблон правил проекта](skills/course-project/assets/AGENTS.md)

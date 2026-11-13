@@ -1,6 +1,6 @@
 ---
-name: kursovaya
-description: Вести техническую курсовую в Codex. Настраивать новый или существующий проект, вести план и решения, распределять работу по главам, принимать результаты, проверять записку и чертежи. Использовать при запуске курсовой или продолжении работы над ней.
+name: course-project
+description: Use when starting or continuing a technical or engineering course project (курсовая, курсовой проект) with calculations, a report, or drawings. Helps plan chapters, verify assignment data, and assemble the final deliverables in Codex.
 ---
 
 # Курсовая
