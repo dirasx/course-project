@@ -1,9 +1,16 @@
 ---
 name: course-project
-description: Helps engineering students plan and review a course project in Codex. Use when starting or resuming a technical course project (курсовая, курсовой проект), checking assignment or variant data and calculations, or preparing the report and drawings for submission.
+description: |-
+  Скилл Codex для студентов, которые делают инженерную курсовую. Помогает составить план по главам, проверить данные своего варианта и подготовить расчёты, записку и чертежи к сдаче.
+
+  A Codex skill for engineering students working on a course project. Use it to plan chapters, verify assignment data and calculations, and review the technical report and drawings before submission.
 ---
 
 # Курсовая
+
+Скилл для студентов, которые делают инженерную курсовую в Codex. Он помогает составить план по заданию и своему варианту, продолжить работу в новом чате и проверить расчёты, пояснительную записку и чертежи перед сдачей.
+
+[English description](#english)
 
 ## Начало и продолжение работы
 
@@ -44,3 +51,13 @@ description: Helps engineering students plan and review a course project in Code
 
 - Во время работы применяй уточнение пользователя к текущей задаче. Долговременное уточнение о варианте, оформлении или проверках запиши в `DECISIONS.md` по схеме «правило → где действует → источник → что перепроверить». При изменении решения обнови действующую запись и затронутые пункты плана. Сохраняй суть, а не переписку.
 - Если пользователь сформулировал правило для следующих курсовых или одинаковое исправление повторилось в нескольких проектах, предложи короткую формулировку для общего скилла. При запросе улучшить скилл перенеси в него подтверждённое правило и проверь на примере, что оно помогает следующему проекту. Данные варианта, имена и пути остаются в документации соответствующей курсовой.
+
+## English
+
+Course Project is a Codex skill for engineering students working on a technical course project. Start with your assignment brief, variant data, and any guidelines or sample report you have.
+
+- **Plan your work.** Break the assignment into chapters and keep the plan, progress, and decisions available across sessions.
+- **Check your inputs.** Trace values to the assignment and the correct variant, verify units and calculations, and flag gaps that need your input.
+- **Review the submission.** Keep calculations, tables, plots, and drawings consistent. Check the final report PDF and compare plotted drawings with the working DWG.
+
+Open your project in Codex and use `$course-project`. The [project rules template](assets/AGENTS.md) is in Russian.
