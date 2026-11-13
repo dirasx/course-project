@@ -6,7 +6,7 @@ A collection of agent skills by xdy. Each skill lives in its own folder and can 
 
 ## AutoCAD skills
 
-[Browse the AutoCAD collection](skills/autocad-skills). It covers [DWG review](skills/autocad-skills/dwg-review/SKILL.md), [PDF drawing review](skills/autocad-skills/drawing-pdf-review/SKILL.md), and [drawing reconstruction](skills/autocad-skills/drawing-redraw/SKILL.md).
+[Browse the AutoCAD collection](skills/autocad-skills). It covers [DWG review](skills/autocad-skills/dwg-review/SKILL.md), [PDF drawing review](skills/autocad-skills/drawing-pdf-review/SKILL.md), [drawing reconstruction](skills/autocad-skills/drawing-redraw/SKILL.md), and [live AutoCAD work through MCP](skills/autocad-skills/xdy-autocad-mcp).
 
 ## Course Project
 
@@ -41,6 +41,7 @@ Open your project in Codex and include `$course-project` in your request:
 Коллекция скиллов для ИИ-агентов. Каждый скилл можно установить отдельно.
 
 В [разделе AutoCAD](skills/autocad-skills#скиллы-для-autocad) собраны проверка DWG, проверка чертежей в PDF и восстановление чертежей по исходникам.
+Для работы с открытым AutoCAD через MCP есть [xdy AutoCAD MCP](skills/autocad-skills/xdy-autocad-mcp#xdy-autocad-mcp-для-windows).
 
 <a name="русская-версия"></a>
 

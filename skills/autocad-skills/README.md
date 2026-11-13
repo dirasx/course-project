@@ -7,6 +7,7 @@ Choose the skill that matches the files you have and the result you need.
 | [DWG Review](dwg-review/SKILL.md) | Inspect the source DWG, compare authorized edits against a baseline, and check plotted sheets. |
 | [Drawing PDF Review](drawing-pdf-review/SKILL.md) | Review visible sheet content and produce findings tied to page locations. |
 | [Drawing Redraw](drawing-redraw/SKILL.md) | Rebuild a drawing from DWG, vector PDF, or an image with known dimensions, and record the limits of the reconstruction. |
+| [xdy AutoCAD MCP](xdy-autocad-mcp) | Work in AutoCAD through a configured MCP server and check the geometry in the saved DWG. Includes a Windows setup and test. |
 
 Install a single skill by selecting its name.
 
@@ -21,6 +22,7 @@ npx skills add dirasx/xdy-skills --skill dwg-review --agent codex --global
 - [Проверка DWG](dwg-review/SKILL.md) помогает сверить свойства исходника, нужные правки и листы после печати.
 - [Проверка чертежей в PDF](drawing-pdf-review/SKILL.md) выдаёт список замечаний с указанием листа, места, важности и следующего действия.
 - [Восстановление чертежа](drawing-redraw/SKILL.md) помогает перенести геометрию из DWG, векторного PDF или изображения с известными размерами и указать точность результата.
+- [xdy AutoCAD MCP](xdy-autocad-mcp#xdy-autocad-mcp-для-windows) помогает читать и править чертежи через подключённый MCP и перепроверять геометрию в сохранённом DWG.
 
 Для установки укажи имя нужного скилла в команде выше. [Курсовая работа](../course-project/SKILL.md) помогает вести учебный проект целиком.
 
@@ -38,4 +40,4 @@ npx skills add dirasx/xdy-skills --skill dwg-review --agent codex --global
 
 [AutoCAD MCP от andagni](https://github.com/andagni/autocad-mcp) — отдельный проект на Rust. В README проекта сказано, что публичный Windows-релиз ещё не одобрен, а пакет для macOS отложен.
 
-Это ссылки для знакомства с инструментами. Для работы с нашими скиллами подключение этих серверов не требуется.
+Для проверки и восстановления чертежей можно пользоваться доступными инструментами. Для `xdy-autocad-mcp` нужен подключённый AutoCAD MCP.
