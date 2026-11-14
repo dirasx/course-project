@@ -63,6 +63,10 @@ description: |-
 
 Добавь в `PLAN.md` нужные чертежи и листы по текущему заданию. Для каждого укажи исходники и связанные расчёты, требуемые виды или разрезы, рабочий файл, итоговые форматы и проверки. Используй данные своего варианта для геометрии и требования к оформлению из задания, методички и образца.
 
+Перед созданием каждого листа проверь, какие утверждённые узлы, виды и разрезы проекта уже существуют. Для повторяющегося элемента используй исходную геометрию из указанного рабочего DWG: скопируй существующий блок либо перенеси нужные объекты как блок с сохранением слоёв, единиц, масштаба, положения и необходимых зависимостей. Если пользователь указал исходный лист и целевые листы, запиши эту связь в `DECISIONS.md` и передай её исполнителям в заданиях. Изменяй только элементы, требуемые для целевого листа, и сохрани все относящиеся к нему расчётные значения и подписи. Оформление и дополнительные элементы определяй по заданию и решениям проекта. Если нужный источник недоступен или нельзя надёжно выделить узел, сообщи об этом и уточни источник до замены его новой геометрией.
+
+После вставки проверь источник и результат в сохранённых DWG: сопоставь геометрию и контрольные размеры, единицы, ориентацию, слои, видимость и зависимости, а также наличие расчётных чисел. Проверь опубликованный PDF целевого листа. Если исходный узел изменился, отметь зависимые листы в плане и повторно сверь их. Укажи, какие файлы и свойства проверены, и оставь недоступные проверки открытыми.
+
 Выбери действие по цели задачи. Подключай подходящие скиллы, если они доступны в текущей сессии.
 
 | Задача | Что делать |
@@ -96,6 +100,7 @@ Course Project is a Codex skill for engineering students working on a technical 
 - **Plan your work.** Break the assignment into chapters and keep the plan, progress, and decisions available across sessions.
 - **Check your inputs.** Trace values to the assignment and the correct variant, verify units and calculations, and flag gaps that need your input.
 - **Plan and verify drawings.** List the drawings, source calculations, required views, and outputs in the project plan. Keep repeatable checks for critical dimensions and angles. Rerun them against the saved DWG after edits, including annotation changes, and review the current plotted PDF before submission.
+- **Reuse existing details.** Before drafting a repeated detail, locate its approved source and reuse the original DWG geometry as a block. Record source-to-destination relationships and check saved drawings, calculated values, dependencies, and the plotted sheets. Recheck dependent sheets when the source changes.
 - **Hand off completed chapters.** Save the result and a handoff note. Queue a pointer for the main chat's next turn when supported and authorized. If delivery is unavailable, leave the pointer in the chapter chat so the coordinator can pick it up later.
 
 Use `$drawing-redraw` to reconstruct a drawing from source material, `$dwg-review` for an existing DWG, and `$drawing-pdf-review` for plotted sheets. Use each companion skill when it is available. For a new drawing, derive geometry and views from the assignment and the student's calculations.

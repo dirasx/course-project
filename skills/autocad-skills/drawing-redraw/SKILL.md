@@ -5,7 +5,7 @@ description: Use when rebuilding a technical drawing from a source DWG, a vector
 
 # Восстановление чертежа
 
-Выбери путь по наиболее полному исходнику. Сохрани оригинал, работай в отдельном файле и заранее определи, что пользователь сможет проверить в результате.
+Выбери путь по наиболее полному исходнику. Если нужный узел уже существует в рабочем DWG, используй исходный блок или перенеси его геометрию как блок с необходимыми слоями, единицами и зависимостями. Сохрани оригинал, работай в отдельном файле и заранее определи, что пользователь сможет проверить в результате.
 
 | Источник | На чём строить результат | Как проверять |
 |---|---|---|
@@ -19,4 +19,4 @@ description: Use when rebuilding a technical drawing from a source DWG, a vector
 
 ## English
 
-Choose the reconstruction method based on the strongest available source. Start from native geometry when the original DWG is accessible. For a vector PDF, calibrate each view with known dimensions and record conversion losses. For an image, use the supplied measurements to constrain geometry and use the image to check shape and placement. Preserve the source, keep approximate values visible, and report the checks actually performed on the output.
+Choose the reconstruction method based on the strongest available source. Reuse an existing detail from the working DWG as a block when available, preserving its required layers, units and dependencies. For a vector PDF, calibrate each view with known dimensions and record conversion losses. For an image, use the supplied measurements to constrain geometry and use the image to check shape and placement. Preserve the source, keep approximate values visible, and report the checks actually performed on the output.
